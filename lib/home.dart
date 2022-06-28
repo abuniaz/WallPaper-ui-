@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallpaper_ui/body/search.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -32,7 +33,8 @@ class MyHomePage extends StatelessWidget {
                         ),
                       )
                     ],
-                  ))
+                  )),
+                const  SearchBar()
             ],
           )),
         ));
