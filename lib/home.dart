@@ -13,27 +13,28 @@ class MyHomePage extends StatelessWidget {
               child: Column(
             children: [
               Container(
-                  margin: const EdgeInsets.only(top: 5),
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  height: 60,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Icon(
-                        Icons.menu,
+                margin: const EdgeInsets.only(top: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                height: 60,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Icon(
+                      Icons.menu,
+                      size: 25,
+                    ),
+                    Text('WallPapers',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    InkWell(
+                      child: Icon(
+                        Icons.favorite,
                         size: 25,
                       ),
-                      Text('WallPapers',
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold)),
-                      InkWell(
-                        child: Icon(
-                          Icons.favorite,
-                          size: 25,
-                        ),
-                      )
-                    ],
-                  )),
+                    )
+                  ],
+                ),
+              ),
               const SearchBar(),
               const TabBar(
                   isScrollable: true,
@@ -42,7 +43,10 @@ class MyHomePage extends StatelessWidget {
                       TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   indicator: BoxDecoration(
-                      border: Border(bottom: BorderSide(width: 2))),
+                    border: Border(
+                      bottom: BorderSide(width: 2),
+                    ),
+                  ),
                   tabs: [
                     Tab(
                       text: 'All',
