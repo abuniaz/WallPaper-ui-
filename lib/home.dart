@@ -34,7 +34,40 @@ class MyHomePage extends StatelessWidget {
                       )
                     ],
                   )),
-                const  SearchBar()
+              const SearchBar(),
+              const TabBar(tabs: [
+                Tab(
+                  text: 'All',
+                ),
+                Tab(
+                  text: 'Trending',
+                ),
+                Tab(
+                  text: 'feature',
+                ),
+                Tab(
+                  text: 'Nature',
+                ),
+                Tab(
+                  text: 'Sky',
+                ),
+                Tab(
+                  text: 'See',
+                )
+              ]),
+              Flexible(
+                  child: Flexible(
+                      flex: 1,
+                      child: TabBarView(
+                        children: [
+                          Container(color: Colors.red),
+                          Container(color: Colors.yellow),
+                          Container(color: Colors.green),
+                          Container(color: Colors.black),
+                          Container(color: Colors.blue),
+                          Container(color: Colors.indigo),
+                        ],
+                      )))
             ],
           )),
         ));
