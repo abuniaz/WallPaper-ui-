@@ -6,8 +6,14 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      margin: const EdgeInsets.symmetric(
+        vertical: 15,
+        horizontal: 20,
+      ),
+      padding: const EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: 20,
+      ),
       height: 55,
       decoration: BoxDecoration(
           color: Colors.white,
@@ -18,6 +24,24 @@ class SearchBar extends StatelessWidget {
                 spreadRadius: 2,
                 blurRadius: 10)
           ]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            width: 300,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                border: InputBorder.none,
+                hintText: "Search here",
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {},
+            child: const Icon(Icons.search),
+          )
+        ],
+      ),
     );
   }
 }
